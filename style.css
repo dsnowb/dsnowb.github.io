@@ -53,6 +53,7 @@ p {
 ul {
   margin-left: 25px;
   list-style-image: url('http://fillmurray.com/20/20');
+  list-style-type: disc;
 }
 
 ol {
