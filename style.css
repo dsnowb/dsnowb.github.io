@@ -1,0 +1,111 @@
+* {
+// 	outline: 1px orange dashed;
+ }
+
+header {
+  text-align: center;
+  background-color: #777;
+  font-family: Arial, sans;
+  font-weight: bold;
+  color: #ddd;
+}
+
+header h1 {
+  font-size: 48px;
+}
+
+header h2 {
+  font-size: 24px;
+}
+
+main {
+  width: 960px;
+  margin: 30px auto;
+}
+
+p:first-child {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section:nth-child(2) {
+  float: left;
+}
+
+aside {
+  float: right;
+  margin-bottom: 30px;
+}
+
+section:nth-child(4) {
+  clear: both;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #a00;
+}
+
+p {
+  margin: 10px auto;
+}
+
+
+
+ul {
+  margin-left: 25px;
+  list-style-image: url('http://fillmurray.com/20/20');
+}
+
+ol {
+  margin-left: 25px;
+  list-style-type: upper-roman;
+}
+
+
+
+
+
+
+
+figure {
+  margin: 30px auto;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  background-color: #777;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.button {
+	cursor: pointer;
+	padding-top: 10px;
+	display: inline-block;
+	height: 30px;
+	width: 200px;
+	text-align: center;
+	background-color: #a00;
+	color: #ddd;
+}
+
+.button:hover {
+	background-color: #ddd;
+	color: #a00;
+}
+
+i {
+  font-style: italic;
+}
