@@ -99,6 +99,13 @@ i {
   font-style: italic;
 }
 
-.hidden {
-  display: none;
+#clickme {
+  background-color: #ff0;
+  color: #000;
+  font-weight: bold;
+}
+
+#clickme:hover {
+  background-color: #000;
+  color: #ff0;
 }
