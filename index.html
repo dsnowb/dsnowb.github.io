@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About Me+</title>
+    <title>Pat's Salmon Cookies</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-      <header>
-        <h1>The name is <i>still</i> Dave</h1>
-        <h2>No one of consequence.</h2>
-      </header>
+    <header>
+      <img src="assets/fish.jpg" width="125px" height="125px">
+      <h1>Pat's Salmon Cookies</h1>
+    </header>
 
-      <main>
-        <p>Let's get the important stuff out of the way, shall we?</p>
-        <section>
-          <h3>I like:</h3>
-          <ul>
-            <li>walks on the beach</li>
-            <li>giant Mexican burritos</li>
-            <li>cartoons named Ren and Stimpy.</li>
-          </ul>
-        </section>
-        <aside>
-          <h3>Top favorite colors, in order:</h3>
-          <ol id="color_list">
-            <!--inject colors here -->
-          </ol>
-        </aside>
-        <section>
-          <figure>
-            <img src="https://i.imgur.com/JseMzJ1.jpg">
-            <figcaption> Here is a picture of an elephant. I also like elephants.</figcaption>
-          </figure>
-          <div class="button" onclick="firstFive();">Guessing Game</div>
-          <div class="button" onclick="guessingGame();">Number Guessing</div>
-          <div class="button" onclick="colorGame();">Color Game</div>
-          <div class="button" id="clickme" onclick="calculate();">Calculate! Click me!</div>
-        </section>
-      </main>
+    <main>
+      <section>
+        <h2>Our Story</h2>
+        <p>
+          <img src="assets/cutter.jpg" width="100px" height="100px">
+          Founded in 2017 by Pat Schmeltzkapop, Pat's Salmon Cookies set out to revolutionize the coffee scene by serving a unique treat: Salmon Cookies. Pat's been a life long baker! You can see the results of his very first cookie-baking attempt!
+        </p> 
+        <p>
+          <img src="assets/frosted-cookie.jpg" width="100px" height="100px">
+          Using an ancient Aztec recipe only known to the Schmeltzkapop clan, we have provided crumbly, Salmon-y perfection to over 500,000 customers across the region. They make great gifts for your Scandinavian relatives! Come try our salmon cookies today!
+        </p>
+        <figure>
+          <img src="assets/family.jpg" width="400px" height="200px">
+          <figcaption>We offer baking lessons every Groundhog Day!</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shirt.jpg" width="180px" height="200px">
+          <figcaption>We also have merchandise!</figcaption>
+        </figure>
+      </section>
 
-      <footer>
-        <a href="http://www.github.com/dsnowb/cf201-04">Source on GitHub</a>
-      </footer>
+      <section id="hourloc">
+        <h2>Hours and Locations</h2>
+        <img src="assets/salmon.png" width="25%" height="25%">
+        <img src="assets/chinook.jpg" width="25%" height="25%">
+        <ul id="loclist"></ul>
+      </section>
 
-      <script src="calc.js"></script>
-      <script src="app.js"></script>
+      <section>
+        <h2>Contact Us</h2>
+        <a href=mailto:pschmletz@demsalmoncookies.biz>E-mail</a>
+        &middot 206.867.5309
+      </section>
+    </main>
+
+    <footer>
+      <p>Some copyright text goes here 2017</p>
+    </footer>
+
+    <script src="stores.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
