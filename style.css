@@ -1,216 +1,120 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Sacramento');
-* {
-  //outline: 1px dotted orange;
-}
-
-body {
-  background-color: #ab9c73;
-}
-
 header {
-  width:960px;
+  width: 960px;
   margin: 0 auto;
+  margin-bottom: 100px;
   text-align: center;
-  background-color: #fff;
-}
-
-header img {
-  margin-top: 10px;
 }
 
 header h1 {
-  padding-top: 20px;
+  margin: 20px auto;
+  width: 400px;
+  border-bottom: 1px solid #aaa;
+  font-weight: bold;
+  color: #444;
   font-size: 72px;
-  font-family: Sacramento;
-  background-color: #4e2422;
-  color: #ab9c73;
+}
+
+header h2 {
+  font-weight: bold;
+  color: #888;
+  font-size: 36px;
 }
 
 main {
   width: 960px;
-  padding: 20px 0;
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-main h2 {
-  margin: 20px auto;
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  text-decoration: underline;
-  color: #2e0402;
-}
-
-section:first-child {
-  width: 500px;
   margin: 0 auto;
   text-align: center;
 }
 
-section:first-child p {
-  margin: 40px 0 60px 0;
-  clear: left;
+main p {
+  margin-top: 150px;
+  color: #444;
+}
+
+ul:nth-child(2){
+  width: 320px;
+  margin-left: 60px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+ul {
+  width: 400px;
+  float: left;
   text-align: left;
 }
 
-p:nth-child(2) img {
-  float: left;
-  margin-right: 30px;
-}
-
-p:nth-child(3) img {
-  float: right;
-  margin-left: 30px;
-}
-
-figure {
-  margin-top: 50px;
-}
-
-figcaption {
+li {
+  font-size: 18px;
   color: #444;
-  font-family: Georgia;
-  font-style: italic;
-  font-size: 14px;
+  margin: 20px 0;
 }
 
-section:nth-child(2) {
-  margin: 0 auto;
-  text-align: center;
-}
-
-section:nth-child(4) {
-  clear:both;
-}
-
-section:last-child {
-  text-align: center;
+.focus_choice {  
+  width: 250px;
+  height: 250px;
+  margin: 20px 25px;
+  border: 2px solid #444;
 }
 
 footer {
-  bottom: 0px;
-  width: 960px;
-  margin: 0 auto;
-  padding: 10px 0;
-  background-color: #4e2422;
-  text-align: center;
-  color: #ac9d74;
-  font-family: Times, serif;
-}
-
-a {
-  color: #4e2422;
-}
-
-a:hover {
-  color: #ab9c73;
-}
-
-table {
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 5px;
-}
-
-th {
-  font-weight: bold;
-  text-align: right;
-}
-
-tr:nth-child(even) td {
-  background-color: #7e5452;
-  color: #2e0402
-}
-
-td {
-  width: 25px;
-  height: 20px;
-  padding: 10px;
-  border: 2px solid #000;
-  background-color: #4e2422;
-  text-align: center;
-  color: #ac9d74;
-}
-
-#hourloc {
   clear: both;
+  width: 960px;
+  margin: 100px auto;
   text-align: center;
-  width: 900px;
-  margin-left: 30px;
 }
 
-#hourloc li {
+.chart_btn {
   display: inline-block;
-  width: 125px;
-  margin-bottom: 30px;
-}
-
-#hourloc img:nth-child(2) {
-  float: left;
-}
-
-#hourloc img:nth-child(3) {
-  position: relative;
-  top: -10px;
-  float: right;
-}
-
-form {
-  position: fixed;
-  top: 350px;
-  left: 0px;
-  width: 450px;
-  text-align: center;
-}
-
-form h4 {
-  margin-bottom: 20px;
-  font-size: 36px;
-  color: #2e0402;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-fieldset div:first-child {
-  width: 200px;
-  float: left;
-  margin-left: 20px;
-  text-align: right;
-}
-
-fieldset div:nth-child(2) {
-  width: 200px;
-  float: right;
-  margin-right: 20px;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin-bottom: 20px;
-  font-family: Geneva;
-  font-size: 16px;
-  font-weight: bold;
-  color: #2e0402;
-}
-
-input {
-  display: block;
-  margin-bottom: 15px;
-}
-
-input[type="submit"] {
+  margin: 20px 50px;
+  width: 50px;
+  height: 20px;
+  padding: 5px 20px 0 20px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-family: Helvetica;
   cursor: pointer;
-  display: inline-block;
-  background-color: #4e2422;
-  padding: 10px 20px;
-  border: 0; 
-  color: #ac9d74;
-  font-weight: bold;
 }
 
-input[type="num"] {
-  width: 60px;
+.chart_btn:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+#overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .9;
+  text-align: center;
+}
+
+#overlay p {
+  margin-top: 200px;
+  margin-bottom: 60px;
+  font-size: 36px;
+  color: #fff;
+}
+
+.overlay_btn {
+  clear: both;
+  display: inline;
+  margin: 50px;
+  width: 70px;
+  padding: 20px 40px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-size; 20px;
+}
+
+.overlay_btn:hover {
+  color: #444;
+  background: #fff;
+  cursor: pointer;
 }
