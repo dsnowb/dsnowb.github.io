@@ -1,0 +1,405 @@
+body {
+   background: url("assets/pin-board-67130_1280.jpg") no-repeat center center fixed;
+   background-size: 100% 100%;
+   overflow: hidden;
+}
+
+body>div:first-child {
+  font-family: 'Cabin Sketch', cursive;
+  color: #301600;
+  font-size: 175px;
+  font-weight:599;
+  height: 50px;
+  width: 120px;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+}
+
+#newNoteButton {
+  background-color: tan;
+  color: black;
+  font-style: bold;
+  text-align: center;
+  font-weight: 595;
+  font-size: 32px;
+  font-family:'Cabin Sketch';
+  width: 150px;
+  height: 30px;
+  position: fixed;
+  top: 85%;
+  left: 7%;
+  /* border-bottom: double; */
+  opacity: 0.9;
+  filter: alpha(opacity=10);
+  border-radius: 5px;
+  margin: auto;
+  /*add shadow effect*/
+  box-shadow: 2px 2px black;
+  padding: 5px 0;
+}
+
+#newNoteButton:hover {
+  background-color: black;
+  padding-top: 10px;
+  height: 25px;
+  color: tan;
+  font-size: 20px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 1000ms;
+}
+/*
+#trashbin {
+  position: absolute;
+  top-margin: 30px;
+  bottom-margin: 5px;
+  right: 5px;
+  height: 20px;
+  width: 30px
+
+  background-color: black;
+  border-width: 1px;
+  border-color: red;
+}
+*/
+#trashButton {
+  background-color: tan;
+  color: black;
+  font-style: bold;
+  text-align: center;
+  font-weight: 595;
+  font-size: 32px;
+  font-family:'Cabin Sketch';
+  width: 150px;
+  height: 30px;
+  position: fixed;
+  top: 85%;
+  right: 7%;
+  /* border-bottom: double; */
+  opacity: 0.9;
+  filter: alpha(opacity=10);
+  border-radius: 5px;
+  margin: auto;
+  /*add shadow effect*/
+  box-shadow: 2px 2px black;
+  padding: 5px 0;
+}
+
+#trashButton:hover {
+  background-color: black;
+  padding-top: 10px;
+  height: 25px;
+  color: tan;
+  font-size: 20px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 1000ms;
+}
+
+.trashbin {
+  position: relative;
+  background-color: #d8d8d8;
+  border: 3px dashed black;
+  text-align: center;
+  overflow: scroll;
+}
+
+.trashbin > h1 {
+  margin: 15px auto;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Cabin Sketch';
+}
+
+.trashbin > div {
+  position: relative;
+  margin: -10%;
+  transform: scale(.3) !important;
+  float: left;
+  transition: all 200ms ease-out;
+}
+
+.trashbin > div:hover { transform: scale(1) !important;}
+
+.note {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  opacity: 1;
+  border: 1px solid #000;
+}
+
+.note:hover .noteTrash { display: inline; }
+.note:hover .noteTitle { border-bottom: 1px solid black; }
+.note:hover > .noteSetFColor { opacity: .8; }
+
+.noteGFilter {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#f0f0f0,#efefef,#eee);
+}
+
+.noteFilter {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: .3125;
+  cursor: move;
+}
+
+.noteMarginTop {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  cursor: move;
+}
+
+.noteMarginRight {
+  position: absolute;
+  top: 5px;
+  bottom: 0px;
+  right: 0px;
+  width: 5px;
+  height: calc(100% - 10px);
+  cursor: ew-resize;
+}
+
+.noteMarginBottom {
+  position: absolute;
+  bottom: 0px;
+  height: 5px;
+  width: 100%;
+  opacity: 1;
+  cursor: ns-resize;
+}
+
+.noteMarginLeft {
+  position: absolute;
+  top: 5px;
+  bottom: 0px;
+  left: 0px;
+  width: 5px;
+  height: calc(100% - 10px);
+  cursor: ew-resize;
+}
+
+.note input,textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0);
+  opacity: 1;
+}
+
+.noteTitle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 20px;
+  width: 120px;
+  font-family: 'Architects Daughter';
+  font-size: 20px;
+}
+
+.noteTrash {
+  position: absolute;
+  display: none;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  text-align: right;
+  color: #622;
+  font-family: courier;
+  cursor: pointer;
+}
+
+.noteSetFColor {
+  position: absolute;
+  width: 25px;
+  right: -30px;
+  top: 10px;
+  padding-left: 5px;
+  opacity: 0;
+}
+
+.noteSetFColor:hover {
+  opacity: .8;
+}
+
+.noteSetFColor div {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 2px;
+}
+
+.noteInput {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 35px);
+  top: 30px;
+  left: 5px;
+  color: #000;
+  font-family: 'Architects Daughter';
+  font-size: 16px;
+}
+
+.noteResize {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 0px;
+  bottom: 0px;
+  cursor: nwse-resize;
+}
+
+/*curl code mostly from paullund.co.uk*/
+.curl1 { -webkit-box-shadow: 1px 1px 4px 1px #000; }
+
+.curl2:before, .curl2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 5px;
+  width: 100%;
+  top: 92%;
+  max-width:242px;
+  background: #000;
+  -webkit-box-shadow: 0 15px 10px #000;
+  -webkit-transform: rotate(-3deg);
+  -webkit-overflow: hidden;
+}
+
+.curl2:after
+{
+  -webkit-transform: rotate(3deg);
+  right: 5px;
+  left: auto;
+  overflow: hidden;
+}
+
+.curl3:before, .curl3:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 5px;
+  right: 35px;
+  width: 80%;
+  top: 92%;
+  background: #000;
+  -webkit-box-shadow: 0 15px 10px 0px #000;
+  -webkit-transform: rotate(-3deg);
+
+}
+
+.curl3:after
+{
+  -webkit-transform: rotate(1deg);
+  right: 5px;
+  left: auto;
+  overflow: hidden;
+}
+
+.curl4:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #000;
+  box-shadow: 0 15px 10px #000;
+  transform: rotate(3deg);
+}
+
+.curl5:before, .curl5:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #000;
+  box-shadow: 0 35px 20px #000;
+  transform: rotate(-8deg);
+}
+.curl5:after
+{
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+.curl6
+{ box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+.curl6:before, .curl6:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 15px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+}
+.curl6:after
+{
+    right:10px;
+    left:auto;
+    transform:skew(8deg) rotate(3deg);
+}
+
+.clip { transition: all .6s ease-out; }
+.newnote { animation: waggle 350ms linear; }
+.loadnote { animation: pop 350ms linear; }
+.shake { animation: shake 70ms linear infinite; }
+.trashing { animation: spindrop 1.5s ease-in; }
+
+@keyframes spindrop {
+  100% {
+    transform: rotate(720deg);
+    top:1500px;
+  }
+}
+
+@keyframes shake {
+  25% { transform: translate(2px); }
+  75% { transform: translate(-2px); }
+}
+
+@keyframes waggle {
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pop {
+  0% { transform: scale(.1); }
+  25% { transform: scale(.3); }
+  50% { transform: scale(.8); }
+  75% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

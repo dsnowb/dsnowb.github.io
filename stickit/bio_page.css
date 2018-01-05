@@ -1,0 +1,108 @@
+/* two columns side by side */
+.column-top {
+    float: left;
+    display: inline-block;
+    padding-left: 60px;
+    margin-top: 60px;
+}
+
+.columns .column-top:first-child{
+  padding: 0;
+}
+
+.columns {
+  width: 1100px;
+  margin: 0 auto;
+
+}
+
+/* .column-bottom{
+  float: left;
+  display: inline-block;
+  padding-top: 90px;
+  padding-left: 304px; */
+
+
+header {
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+  padding-top: 125px;
+  color: white;
+}
+
+.card {
+  height: 150px;
+  padding-left: 50px;
+
+
+
+}
+
+.container {
+    width: 150px;
+    padding: 5px;
+    text-align:center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0;
+    margin-top: 40px;
+}
+
+.title {
+    color: grey;
+    font-size: 20px
+
+}
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: darkgrey;
+  border-width: 5px;
+  /* padding-bottom: 40px; */
+  /* padding-left: 50px;
+  padding-right: 50px; */
+
+}
+
+body {
+   background: url("assets/pin-board-67130_1280.jpg") no-repeat center center fixed;
+   background-size: 100% 100%;
+   overflow: hidden;
+   z-index: 1;
+}
+h2 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 30px;
+}
+.likes {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+/* used Jaspers button from the main page */
+.button {
+  background-color: tan;
+  color: black;
+  font-style: bold;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: 'Architects Daughter', cursive;
+  width: 160px;
+  height: 40px;
+  filter: alpha(opacity=10);
+  border-radius: 5px;
+  /*add shadow effect*/
+  box-shadow: 2px 2px black;
+  display: block;
+  top: 10%;
+  right: 10%;
+  float: right;
+  position: absolute;
+}
+
+.button:hover {
+    background-color: #555;
+    cursor:
+}
